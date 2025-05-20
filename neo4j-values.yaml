@@ -1,0 +1,20 @@
+neo4j:
+  name: "neo4j-standalone"
+  password: "project1phase2"
+
+  acceptLicenseAgreement: "yes"
+  plugins:
+    - name: graph-data-science
+      version: "2.3.1"
+  # ─── NEO4J CONFIG ────────────────────────────────────────────── 
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "2Gi"
+    limits:
+      cpu: "1"
+      memory: "4Gi"
+      # ─── VOLUME CONFIG ──────────────────────────────────────────────
+volumes:
+  data:
+    mode: defaultStorageClass
